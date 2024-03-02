@@ -61,6 +61,14 @@
   .nav-links li:last-child {
     margin-right: 0;
   }
+
+  .Admin {
+    color: rgb(190, 190, 176);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+  }
   
   .nav-links a {
     color: rgb(43, 43, 38);
@@ -68,15 +76,15 @@
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 200;
-    letter-spacing: 1px;
+    
   }
   
   .nav-links a:first-child {
-    font-weight: 500;
+    font-weight: 50;
   }
   
   .nav-links a:hover {
-    color: #0c0b0b;
+    color: #5c5656;
     font-weight: 500;
   }
   

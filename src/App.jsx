@@ -57,7 +57,7 @@ async function currentAuthenticatedUser() {
       
         <div className="App">
           <div className="navbar">
-          <Navbar />
+          <NavbarAlt />
           <button className="admin-button" onClick={currentAuthenticatedUser}>current user</button>
           
             </div> 

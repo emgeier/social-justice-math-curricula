@@ -12,6 +12,10 @@ import { deleteLessonPlan } from '../graphql/mutations';
 import { listLessonPlans } from '../graphql/queries';
 import { getUrl } from 'aws-amplify/storage';
 import {remove} from 'aws-amplify/storage'
+import {
+  Button,
+  Flex
+} from "@aws-amplify/ui-react";
 
 import Viewer from './Viewer';
 

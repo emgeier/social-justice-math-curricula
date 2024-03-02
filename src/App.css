@@ -118,4 +118,27 @@
 .sign-out-button:hover {
   background-color: #0056b3;
 }
-
+.approve-button{
+  position: flex;
+  top: 10px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #2c3953;
+  color: #0b0909;
+  border: line;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.delete-button{
+  position: flex;
+  top: 10px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #6b1b0b;
+  color: #0b0909;
+  border: line;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
