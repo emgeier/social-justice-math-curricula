@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sjm-dev-170524-authRole",
+      "UnauthRoleArn": "arn:aws:iam::814369094182:role/amplify-sjm-dev-170524-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::814369094182:role/amplify-sjm-dev-170524-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-sjm-dev-170524-deployment",
+      "UnauthRoleName": "amplify-sjm-dev-170524-unauthRole",
+      "StackName": "amplify-sjm-dev-170524",
+      "StackId": "arn:aws:cloudformation:us-east-2:814369094182:stack/amplify-sjm-dev-170524/3085eb20-d820-11ee-9d2c-06e8cc3c5f85",
+      "AmplifyAppId": "dpk4mbzqmp8wo"
+    },
+    "categories": {
+      "api": {
+        "sjm": {}
+      },
+      "auth": {
+        "sjmsignin": {},
+        "userPoolGroups": {}
+      },
+      "storage": {
+        "s3fdb425df": {},
+        "dynamofc42cf15": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  }
+}

@@ -36,3 +36,82 @@
     transform: rotate(360deg);
   }
 }
+.overview-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.overview-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.overview-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.overview-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.overview-container li {
+  margin-bottom: 20px;
+}
+
+.overview-container p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Style links */
+.overview-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.overview-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* Position the sign-out button */
+.sign-out-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.admin-button {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sign-out-button:hover {
+  background-color: #0056b3;
+}
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

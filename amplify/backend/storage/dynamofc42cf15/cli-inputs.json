@@ -1,0 +1,26 @@
+{
+  "resourceName": "dynamofc42cf15",
+  "tableName": "dynamofc42cf15",
+  "partitionKey": {
+    "fieldName": "mathTopic",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "byApproval",
+      "partitionKey": {
+        "fieldName": "socialJusticeTopic",
+        "fieldType": "string"
+      },
+      "sortKey": {
+        "fieldName": "mathTopic",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}
