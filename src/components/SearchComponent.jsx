@@ -21,13 +21,20 @@ function SearchComponent() {
 
   async function fetchLessonPlans() {
     try {
-      const lessonPlanData = await client.graphql({ query: listLessonPlans });
+      const lessonPlanData = await client.graphql({ query: listLessonPlans, variables: variables });
       const lessonPlans = lessonPlanData.data.listLessonPlans.items;
       setLessonPlans(lessonPlans);
     } catch (err) {
       console.log('Error fetching lesson plans:', err);
     }
   }
+  const variables = {
+    filter: {
+      approved: {
+        eq: true
+      }
+    }
+  };
 
   const [searchResults, setSearchResults] = useState([]);
   const [selectedPDF, setSelectedPDF] = useState(null);

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-//import '../App.css';
-import './search.css'
+import '../App.css';
+
 import { Amplify } from 'aws-amplify';
 import { Authenticator, withAuthenticator } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css';
@@ -33,12 +33,20 @@ function Admin() {
 
   async function fetchLessonPlans() {
     try {
-      const lessonPlanData = await client.graphql({ query: listLessonPlans });
+      const variables = {
+        filter: {
+          approved: {
+            eq: false
+          }
+        }
+      };
+
+      const lessonPlanData = await client.graphql({ query: listLessonPlans, variables: variables });
       const lessonPlans = lessonPlanData.data.listLessonPlans.items;
-      const results = lessonPlans.filter(item =>
-        item.approved === false
-      );
-      setLessonPlans(results);
+      // const results = lessonPlans.filter(item =>
+      //   item.approved === false
+      // );
+      setLessonPlans(lessonPlans);
     } catch (err) {
       console.log('Error fetching lesson plans:', err);
     }
@@ -125,10 +133,7 @@ const handleRemove = async (filekey) => {
         {({signOut, user}) => (
         
         <div className="Admin">
-          <button className="sign-out-button" onClick={signOut}>Sign Out</button>
-
               <h2>Review Lesson Plans</h2>
-
               <ul>
                 {lessonPlans.map(item => (
                   <ul key={item.id}>
@@ -143,7 +148,6 @@ const handleRemove = async (filekey) => {
                 <div className='overview-container'>
                 <button className="approve-button" onClick={approveLessonPlan}>Approve</button>
                 <button className="delete-button" onClick={rejectLessonPlan}>Delete</button>
-
                 </div>
                 
       

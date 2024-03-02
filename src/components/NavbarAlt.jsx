@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css'; // Import your CSS file
+import { signOut } from 'aws-amplify/auth';
 
 const NavbarAlt = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,8 @@ const NavbarAlt = () => {
         <li><Link to="/download">Download</Link></li>
         <li><Link to="/admin">Administration</Link></li>
       </ul>
+      <button className="sign-out-button" onClick={signOut}>Sign Out</button>
+
     </nav>
   );
 };

@@ -20,7 +20,8 @@ import Contribute from './components/Contribute.jsx';
 import Navbar from './components/Navbar.jsx';
 import Overview from './components/Overview.jsx';
 import SearchComponent from './components/SearchComponent.jsx';
-import NavBarAlt from './components/NavbarAlt.jsx';
+import NavbarAlt from './components/NavbarAlt.jsx';
+import { signOut } from 'aws-amplify/auth';
 
 
 //Configure is used for authentication
@@ -56,12 +57,14 @@ async function currentAuthenticatedUser() {
       
         <div className="App">
           <div className="navbar">
-          <NavBarAlt />
+          <Navbar />
+          <button className="admin-button" onClick={currentAuthenticatedUser}>current user</button>
+          
             </div> 
               
           
-          <button className="button" onClick={currentAuthenticatedUser}>current user</button>
-          <button className="button" onClick={currentSession}>current session</button>
+          <button className="admin-button" onClick={currentAuthenticatedUser}>current user</button>
+          <button className="admin-button-2" onClick={currentSession}>current session</button>
 
             <header className='App-header'>
 

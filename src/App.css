@@ -79,22 +79,37 @@
 
 /* Position the sign-out button */
 .sign-out-button {
-  position: absolute;
+  position: flex;
   top: 10px;
   right: 20px;
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #282c34;
+  color: #0b0909;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Adjust margin or padding to separate buttons */
+.sign-out-button {
+  margin-left: 10px; /* Add some space between buttons */
+}
+.admin-button {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #282c34;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
-.admin-button {
+.admin-button-2 {
   position: absolute;
-  top: 60px;
+  top: 140px;
   right: 20px;
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #282c34;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -103,15 +118,4 @@
 .sign-out-button:hover {
   background-color: #0056b3;
 }
-button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-button:hover {
-  background-color: #0056b3;
-}
