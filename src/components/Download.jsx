@@ -4,6 +4,8 @@ import { getUrl } from 'aws-amplify/storage';
 import { list } from 'aws-amplify/storage';
 import { getLessonPlan } from '../graphql/queries';
 
+//This has been set up to show how to set up a download link, not for production use.
+
 const client = generateClient();
 
 const Download = (props) => {
@@ -24,6 +26,7 @@ const Download = (props) => {
             console.log(error);
         }
     }
+    //This is the only function necessary for the production version
        
     async function generateDownloadLinks(fileKey){
         try {
