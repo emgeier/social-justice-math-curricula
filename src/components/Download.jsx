@@ -33,6 +33,8 @@ const Download = (props) => {
             const getUrlResult = await getUrl({key: fileKey});
             console.log('signed url: ', getUrlResult.url.href);
 
+            //In order to show title of lesson plan, look up the title in dynamodb using key: s3 and DynamoDB use the same key in this example.
+
             const title = await findLessonPlan(fileKey);
 
             return { key: fileKey, downloadLink: getUrlResult.url.href, title: title };

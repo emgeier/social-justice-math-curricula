@@ -38,6 +38,7 @@ function SearchComponent() {
 
   const [searchResults, setSearchResults] = useState([]);
   const [selectedPDF, setSelectedPDF] = useState(null);
+  
 
   const handleSearch = (socialJusticeTerm, mathTerm) => {
     const results = lessonPlans.filter(item =>
@@ -49,8 +50,11 @@ function SearchComponent() {
 
   const handlePDFClick = async (fileKey) => {
     try {
+      
       const viewableLink = await generateViewableLink(fileKey);
       setSelectedPDF(viewableLink);
+      
+      
     } catch (error) {
       console.log('Error generating viewable link:', error);
     }
@@ -58,7 +62,9 @@ function SearchComponent() {
 
   async function generateViewableLink(fileKey) {
     try {
+      console.log(fileKey);
       const getUrlResult = await getUrl({ key: fileKey });
+      console.log('viewablelink',getUrlResult.url.href);
       return getUrlResult.url.href;
     } catch (error) {
       console.log('Error generating viewable link:', error);

@@ -7,13 +7,14 @@ import {
   Flex
 } from "@aws-amplify/ui-react";
 
+
 const pdfjs = await import('pdfjs-dist/build/pdf');
 const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.entry');
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 
-const Viewer = ({ pdfUrl }) => {
+const Viewer = ({ pdfUrl, filekey }) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -44,6 +45,9 @@ const Viewer = ({ pdfUrl }) => {
         <div>
          <Flex justifyContent="space-between">
            <Button onClick= { turnBack }>Previous</Button>
+           <a href={pdfUrl} target="_blank" download="">
+          <Button >Download</Button>
+          </a>
            <Flex gap="15px">
            <Button onClick={turnPage} >Next</Button>
           </Flex>
